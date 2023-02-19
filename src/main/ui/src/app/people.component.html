@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>The People of Star Wars</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Mass</th>
+        <th>Gender</th>
+        <th>Homeworld</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people; let i = index">
+        <td>{{person.name}}</td>
+        <td>{{person.height}}</td>
+        <td>{{person.mass}}</td>
+        <td>{{person.gender}}</td>
+        <td>{{person.homeworld}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

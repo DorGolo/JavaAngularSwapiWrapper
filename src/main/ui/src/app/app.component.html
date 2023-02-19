@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 mrgnbtm">
+      <h2>Find a Character</h2>
+      <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="exampleInputEmail1">Search by Name</label>
+            <input type="text" class="form-control" formControlName="search" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+          </div>
+        </div>
+        <button type="submit" [disabled]="!personForm.valid" class="btn btn-danger">Find</button>
+      </form>
+    </div>
+    </div>
+</div>
+<div class="mrgnbtm">
+  <app-people *ngIf="people.length !== 0" [people]="people"></app-people>
+</div>
